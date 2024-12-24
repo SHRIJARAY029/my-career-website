@@ -1,0 +1,75 @@
+<p>home works!</p>
+<div>
+    <div class="bio" id="bio">
+      <h2>About Me</h2>
+      <p>Welcome to my personal website! I am a passionate software developer with experience in designing, developing, and deploying software solutions. I specialize in a variety of programming languages and frameworks, including Python, C, C#, and more.</p>
+     
+      <!-- <button (click)="navigateToAboutMe()">See More</button> -->
+      <!-- <button [routerLink]="['/about-me']">See More</button>  -->
+      <button (click)="goToAboutMe()">See More</button>
+      <!-- <li><a routerLink="/about-me" routerLinkActive="active" ariaCurrentWhenActive="page">See More</a></li> -->
+      <div class="full-page-container">
+      <router-outlet></router-outlet>
+    </div>
+      
+      
+    </div>
+    <div class="portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="card-container">
+        <div class="card" (click)="navigateToSection('genai')">
+          <img src="assets/images/GenAI.jpg" alt="GenAI" class="card-image">
+          <div class="card-title">GenAI</div>
+        </div>
+        <div class="card" (click)="navigateToSection('oil-and-gas')">
+          <img src="assets/images/Oil and Gas.jpg" alt="Oil and Gas" class="card-image">
+          <div class="card-title">Oil and Gas</div>
+        </div>
+        <div class="card" (click)="navigateToSection('data-engineering')">
+          <img src="assets/images/data engineering.jpg" alt="Data Engineering" class="card-image">
+          <div class="card-title">Data Engineering</div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="blog" id="blog">
+      <h2>Blog</h2>
+      <div class="blog-post">
+        <h3>Blog Post Title 1</h3>
+        <p>Excerpt of the blog post.</p>
+      </div>
+      <div class="blog-post">
+        <h3>Blog Post Title 2</h3>
+        <p>Excerpt of the blog post.</p>
+      </div>
+    </div>
+    <div class="social">
+      <h2>Follow Me</h2>
+      <!-- <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+      <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> -->
+      <a href="https://github.com/SHRIJARAY029/" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/shrija-ray-9b8193175/" target="_blank">LinkedIn</a>
+      <div class="icon-container" id="contact">
+        <h2>Contact</h2>
+        <div  style="display: flex; flex-direction: row;">
+        <div class="icon" (click)="navigateTo(linkedinUrl)" title="LinkedIn">
+          <img src="assets/icons/linkedin copy.svg" alt="LinkedIn" />
+        </div>
+        <div class="icon" (click)="navigateTo(githubUrl)" title="GitHub">
+          <img src="assets/icons/github copy.svg" alt="GitHub" />
+        </div>
+        <div class="icon" (click)="sendMail()" title="Mail">
+          <img src="assets/icons/mail copy.svg" alt="Mail" />
+        </div>
+        <div class="icon dropdown" (click)="toggleContactDropdown()" title="Call">
+          <img src="assets/icons/phone copy.svg" alt="Call" />
+          <div class="dropdown-content" *ngIf="showContact">
+            <p>{{ contactNumber }}</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>

@@ -1,20 +1,22 @@
+import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { RouterOutlet,RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';  // Import CommonModule
-import { AboutMeComponent } from './about-me/about-me.component';
-import { HomeComponent } from './home/home.component';
-
+import { AboutMeComponent } from '../about-me/about-me.component';
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
   imports: [RouterOutlet, CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class AppComponent {
+
+
+export class HomeComponent {
+
   constructor(private router: Router) {}
   title = 'my-career-website';
   isCollapsed = false;
@@ -23,6 +25,10 @@ export class AppComponent {
   email = 'shrijaray@gmail.com';
   contactNumber = '+91 6291332409';
   showContact = false;
+
+  navigateToSection(sectionId: string): void {
+    this.router.navigate(['/about-me'], { fragment: sectionId });
+  }
 
   navigateTo(url: string): void {
     window.open(url, '_blank');
@@ -35,16 +41,12 @@ export class AppComponent {
   toggleContactDropdown(): void {
     this.showContact = !this.showContact; // Toggle dropdown visibility
   }
+
   
 
   // navigateToAboutMe() {
   //   this.router.navigate(['/about-me']);  // Correct path with a hyphen
   // }
-
-  goToHome() {
-    this.router.navigate(['/home']);
-  }
-
   goToAboutMe() {
     this.router.navigate(['/about-me']);
   }
@@ -53,7 +55,6 @@ export class AppComponent {
   
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
-  }
-
+}
 }
 
