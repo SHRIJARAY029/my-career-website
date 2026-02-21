@@ -1,0 +1,52 @@
+{
+  "hash": "06706778",
+  "configHash": "f0b1deed",
+  "lockfileHash": "26df8c8c",
+  "browserHash": "c76b3c30",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "ab1d03c6",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "8b012709",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "3c4f5ac5",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "3e1e84d8",
+      "needsInterop": false
+    },
+    "chart.js": {
+      "src": "../../../../../node_modules/chart.js/dist/chart.mjs",
+      "file": "chart__js.js",
+      "fileHash": "4f433c58",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-2SYENXRM": {
+      "file": "chunk-2SYENXRM.js"
+    },
+    "chunk-WY2AKSDC": {
+      "file": "chunk-WY2AKSDC.js"
+    },
+    "chunk-NJJN6HAR": {
+      "file": "chunk-NJJN6HAR.js"
+    },
+    "chunk-WDMUDEB6": {
+      "file": "chunk-WDMUDEB6.js"
+    }
+  }
+}
